@@ -19,3 +19,7 @@ DBT issues:
 correct and rendered text is correct
 2. When a chapter is selected, the button is not a different color, to show which one was selected
 3. Switching bettween chapters has a 2-sec delay
+
+React issues:
+-- this has been omitted from entry[] in webpack config
+    './app/index.js'
