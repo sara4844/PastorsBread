@@ -1,0 +1,23 @@
+{
+  "name": "pastors-bread",
+  "version": "1.0.0",
+  "description": "Platform for archiving sermons and commentaries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sara4844/PastorsBread.git"
+  },
+  "author": "Sara Leroy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sara4844/PastorsBread/issues"
+  },
+  "homepage": "https://github.com/sara4844/PastorsBread#readme",
+  "devDependencies": {
+    "firebase": "^3.2.1",
+    "server": "0.0.3"
+  }
+}
