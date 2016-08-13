@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PastersBread</title>
+    <title>PastorsBread</title>
     <link rel="stylesheet" type="text/css" href="ContentTools-master/build/content-tools.min.css">
     <link rel="stylesheet" type="text/css" href="editor.css">
     <script src="ContentTools-master/build/content-tools.min.js"></script>
     <script src="editor.js"></script>
+    <script src="DBT.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="DBT.css">
+    <script src="semantic/dist/semantic.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
@@ -20,29 +25,56 @@
             apiKey: "AIzaSyB41zY1DrVduZUZVGDRMNCHLcpiA7ofxfw",
             authDomain: "parsetext-7e9a2.firebaseapp.com",
             databaseURL: "https://parsetext-7e9a2.firebaseio.com",
-            storageBucket: "parsetext-7e9a2.appspot.com",
+            storageBucket: "parsetext-7e9a2.appspot.com"
         };
         firebase.initializeApp(config);
     </script>
 
 </head>
 <body>
-    <!-- Mark the regions that will be editable -->
-    <div id="heading" data-editable data-name="heading">
-        <h1>Content to edit</h1>
-    </div>
-    <div id="main-content" data-editable data-name="main-content">
-        <blockquote>
-            Always code as if the guy who ends up maintaining your code will be a violent psychopath
-            who knows where you live.
-        </blockquote>
-        <p>John F. Woods</p>
-    </div>
-    <div>
-        <button id="retrieve-data">Retrieve data</button>
-        <div id="render-here">
-        </div>
-    </div>
+    <table>
+        <tr>
+            <td class=" ui basic  segment">
+                <div id="search-input" class="ui center aligned basic segment">
+                    <select id="books" onchange="thisBook()" class="ui search dropdown" >
+                    </select>
+
+                    <select id="version" onchange="thisVersion()" class="ui search dropdown" >
+                    </select>
+                    <br/>
+                    <br/>
+                    <div>
+                        <div class="ui tiny buttons" id="chapters" style="display: none">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ui raised very padded text container segment ">
+                    <div id="render-books" ></div>
+                </div>
+            </td>
+            <td>
+                <!-- Mark the regions that will be editable -->
+                <div id="heading" data-editable data-name="heading">
+                    <h1>Content to edit</h1>
+                </div>
+                <div id="main-content" data-editable data-name="main-content">
+                    <blockquote>
+                        Always code as if the guy who ends up maintaining your code will be a violent psychopath
+                        who knows where you live.
+                    </blockquote>
+                    <p>John F. Woods</p>
+                </div>
+                <div>
+                    <button id="retrieve-data">Retrieve data</button>
+                    <div id="render-here">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
 
 </body>
 
