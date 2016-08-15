@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
             handleInput(input);
         }
     };
-    xmlhttp.open("GET","Bible.json",true);
+    xmlhttp.open("GET","./DBT/Bible.json",true);
     xmlhttp.send();
 
     function handleInput(input) {

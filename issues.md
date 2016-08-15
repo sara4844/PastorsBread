@@ -23,3 +23,4 @@ correct and rendered text is correct
 React issues:
 -- this has been omitted from entry[] in webpack config
     './app/index.js'
+-- make better use of webpack
