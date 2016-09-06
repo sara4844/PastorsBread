@@ -84,9 +84,10 @@ module.exports = (grunt) ->
 
             build:
                 files:
-                    'build/content-tools.min.css':
+                    'build/content-tools.min.css': [
                         'src/styles/content-tools.scss'
-
+                        'src/styles/_ignition.scss'
+                        ]
             sandbox:
                 files:
                     'sandbox/sandbox.css': 'src/sandbox/sandbox.scss'

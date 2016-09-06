@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>PastorsBread</title>
     <link rel="stylesheet" type="text/css" href="ContentTools-master/build/content-tools.min.css">
-    <link rel="stylesheet" type="text/css" href="editor.css">
+    <link rel="stylesheet" type="text/css" href="Editor/editor.css">
     <script src="ContentTools-master/build/content-tools.min.js"></script>
-    <script src="editor.js"></script>
-    <script src="DBT.js"></script>
+    <script src="Editor/EditorContainer.js"></script>
+    <script src="DBT/DBTContainer.js"></script>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="DBT.css">
+    <link rel="stylesheet" type="text/css" href="DBT/DBT.css">
     <script src="semantic/dist/semantic.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -17,7 +17,7 @@
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-
+    <script src="index.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -32,50 +32,7 @@
 
 </head>
 <body>
-    <table>
-        <tr>
-            <td class=" ui basic  segment">
-                <div id="search-input" class="ui center aligned basic segment">
-                    <select id="books" onchange="thisBook()" class="ui search dropdown" >
-                    </select>
-
-                    <select id="version" onchange="thisVersion()" class="ui search dropdown" >
-                    </select>
-                    <br/>
-                    <br/>
-                    <div>
-                        <div class="ui tiny buttons" id="chapters" style="display: none">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="ui raised very padded text container segment ">
-                    <div id="render-books" ></div>
-                </div>
-            </td>
-            <td>
-                <!-- Mark the regions that will be editable -->
-                <div id="heading" data-editable data-name="heading">
-                    <h1>Content to edit</h1>
-                </div>
-                <div id="main-content" data-editable data-name="main-content">
-                    <blockquote>
-                        Always code as if the guy who ends up maintaining your code will be a violent psychopath
-                        who knows where you live.
-                    </blockquote>
-                    <p>John F. Woods</p>
-                </div>
-                <div>
-                    <button id="retrieve-data">Retrieve data</button>
-                    <div id="render-here">
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-
+    <div id="app"></div>
 </body>
 
 </html>

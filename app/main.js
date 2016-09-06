@@ -14,13 +14,12 @@ export default class Main extends Component {
                 </div>
                 <div className="ui basic segment">
                     <h1>Bible</h1>
-                    <DBTContainer />
+                    <DBTContainer/>
                 </div>
                 <div className="ui segment">
                     <h1>Fancy Editor</h1>
                     <Editor />
                 </div>
-
             </div>
 
         )

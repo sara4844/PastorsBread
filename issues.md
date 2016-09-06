@@ -3,6 +3,12 @@ Now unto BibLE!!!!!!!!!
 I'd like to thank God for helping me get this far into the project. When I first started out, I never thought I would make it. But here we are moving onto stage two! of the project.
 There is much more to do
 
+index.html:
+remove unnecessarily linked scripts
+
+Scripture.js
+passing props are not verified
+
 ParseText issues:
 
 errors to fix include:
